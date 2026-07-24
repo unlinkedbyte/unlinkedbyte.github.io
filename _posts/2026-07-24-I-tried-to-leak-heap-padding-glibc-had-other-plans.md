@@ -6,7 +6,7 @@ categories: [research, labs]
 tags: [x86, memory, alignment, heap, glibc]
 ---
 
-#A small experiment with compiler padding, heap reuse, tcache metadata, and residual data
+###A small experiment with compiler padding, heap reuse, tcache metadata, and residual data
 
 
 Hi there. Today, I was back at it again with Jon Erickson's LiveCD, pushing my boundaries with GDB and analyzing compiled binaries. While researching how memory structures behave under the hood, I noticed something interesting: a structural quirk that reminded me of a class of information disclosure vulnerabilities, often involving heap padding or leftover data in reused memory.
