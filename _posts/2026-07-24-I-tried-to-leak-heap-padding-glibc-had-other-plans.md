@@ -221,6 +221,6 @@ A 12-byte C structure can exist inside a larger heap allocation. The allocator c
 
 That was the real lesson for me: when looking at memory, it is not enough to ask what bytes are here? You also have to ask who owns them, who wrote them, and at which layer are they being interpreted?
 
-This experiment started with alignment.
+This experiment started by looking for potential logical gaps where memory alignment, driven in part by CPU efficiency, might leave bytes outside the data explicitly initialized by a program.
 
 It ended with glibc.
