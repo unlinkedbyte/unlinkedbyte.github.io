@@ -172,18 +172,19 @@ Byte 23: 0x41 (A) <-- GENUINE HEAP SLACK SPACE (Residual data from a previous al
 
 glibc chunk
 
-+------------------------+
-| chunk metadata         |
-| (allocator-managed)    |
-+------------------------+
-| struct object          |
-| id[5]                  |
-| compiler padding       |
-| int x                  |
-+------------------------+
-| extra usable bytes     |
-| outside the C object   |
-+------------------------+
+  +------------------------+
+  | chunk metadata         |
+  | (allocator-managed)    |
+  +------------------------+  
+  | struct object          |
+  | id[5]                  |
+  | compiler padding       |
+  | int x                  |
+  +------------------------+
+  | extra usable bytes     |
+  | outside the C object   |
+  +------------------------+
+
 
 The last region is not part of struct LeakyStruct, even though malloc_usable_size() may report it as usable space. 
 
