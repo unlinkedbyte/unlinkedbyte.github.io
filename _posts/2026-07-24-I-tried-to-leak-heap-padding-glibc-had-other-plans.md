@@ -193,7 +193,7 @@ This means that the relationship between the requested size, the physical chunk 
 
 In this experiment, the important point is that glibc reports 24 usable bytes, while the C object itself remains only 12 bytes.
 
-##Final Thoughts
+### Final Thoughts
 
 What started as a thought about CPU efficiency, data alignment, and whether alignment could leave unused space in RAM ended up becoming a journey through multiple layers of memory management.
 
