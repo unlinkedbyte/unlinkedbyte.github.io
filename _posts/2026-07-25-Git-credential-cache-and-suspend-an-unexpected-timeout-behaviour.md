@@ -97,7 +97,7 @@ credential.helper=cache --timeout=240
                         |___________|          
 ```
 
-If you look at the first lines of the strace output, you can see that we have a time difference of 10 minutes even though we have 240 seconds configured.
+If you look at the first lines of the strace output, you can see that we have a time difference of 15 minutes even though we have 240 seconds configured.
 
 Why this has happened? What could the impact be? Could a password leak through a RAM dump or some other kind of leakage if someone escalate privileges on our machine and, because we were unaware of this unexpected behaviour, the credentials are still in memory? 
 
