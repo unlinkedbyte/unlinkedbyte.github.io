@@ -195,16 +195,7 @@ In this experiment, the important point is that glibc reports 24 usable bytes, w
 
 ##Final Thoughts
 
-What started as a simple question about data alignment and CPU efficiency turned into something much more interesting.
+What started as a thought about CPU efficiency, data alignment, and whether alignment could leave unused space in RAM ended up becoming a journey through multiple layers of memory management.
 
-I initially wanted to understand why a structure could contain bytes that I hadn't explicitly written. But following those bytes led me through several different layers of the system: compiler padding, ABI alignment, heap allocation, chunk layout, tcache metadata, and finally the extra bytes that glibc reported as usable.
-
-The most interesting part was not finding a vulnerability. In fact, this experiment does not demonstrate a standalone vulnerability by itself. What it demonstrates is how easy it is to lose sight of what a program actually owns when looking at memory at different abstraction levels.
-
-A 12-byte C structure can exist inside a larger heap allocation. The allocator can manage metadata that the program never sees. Freed memory can be reused. Security mechanisms can overwrite some of the old contents while leaving other bytes untouched. And what initially looks like "padding" can turn out to have several completely different origins.
-
-That was the real lesson for me: when looking at memory, it is not enough to ask what bytes are here? You also have to ask who owns them, who wrote them, and at which layer are they being interpreted?
-
-This experiment started by looking for potential logical gaps where memory alignment, driven in part by CPU efficiency, might leave bytes outside the data explicitly initialized by a program.
-
-It ended with glibc.
+But perhaps that's the most interesting part: sometimes, optimizations designed for efficiency can leave unexpected gaps--and those gaps may become security-relevant.
+º
