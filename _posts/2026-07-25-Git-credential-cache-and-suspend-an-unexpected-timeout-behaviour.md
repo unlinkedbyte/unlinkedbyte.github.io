@@ -105,8 +105,7 @@ Why this has happened? What could the impact be? Could a password leak through a
 ### The investigation
 The investigation has focused more on how the flow of time is supposed to stop, which clock it uses, why the credential had not expired yet, and wheter the developers may have already taken this into account, and, since it may not have a serious impact, they may have left as is. Perhaps it is more like a logic flaw instead of a security issue. Perhaps.
 
-*Before anything else, I should mention that this investigation was carried out with substantial help from a powerful LLM (after weighing the possible impact of the issue) so that I could keep spending time on assembly and binary analysis.
-*
+*Before anything else, I should mention that this investigation was carried out with substantial help from a powerful LLM (after weighing the possible impact of the issue) so that I could keep spending time on assembly and binary analysis.*
 
 
 To find out exactly why this happens, we first turned to Git's source code, specifically `credential-cache--daemon.c`. The daemon stores credentials in an in-memory array, assigning each entry a timestamp: `expiration = time(NULL) + timeout`. However, there is only one place in the entire code that purges expired entries: the `check_expirations()` function. 
