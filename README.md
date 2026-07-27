@@ -1,6 +1,6 @@
 # unlinkedbyte | research & labs 
 
-**Live Blog:** [Click here to view all posts](https://github.com/unlinkedbyte/unlinkedbyte.github.io/tree/main/_posts)
+**[Click here to view all posts](https://github.com/unlinkedbyte/unlinkedbyte.github.io/tree/main/_posts)**
 
 ---
 
