@@ -1,6 +1,6 @@
 # unlinkedbyte | research & labs 
 
-**[Click here to view all posts](https://unlinkedbyte.github.io/)**
+**[Click here to go to the blog](https://unlinkedbyte.github.io/)**
 
 ---
 
