@@ -35,6 +35,7 @@ The output:
 ```
 
 2. **Active time:**
+
 ```bash
 ps -o etimes=,pid=,cmd= -p 132194
 
@@ -86,6 +87,7 @@ strace: Process 132194 attached
 ```
 
 4. **The checker and the time we use for checking**
+
 ```
 git config --global --list
 
