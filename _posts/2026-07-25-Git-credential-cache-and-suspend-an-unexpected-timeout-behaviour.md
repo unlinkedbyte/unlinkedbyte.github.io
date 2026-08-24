@@ -47,6 +47,7 @@ The output:
 I did not use it again for the simple reason you will se below, as strace already indicates the execution time, but using it after many hours, where there should be thousands of seconds, should show you that barely any time has passed.
 
 3. **The trace**
+
 ```bash
 sudo strace -tt -p 132194
 
@@ -96,7 +97,7 @@ user.email= -----------
 user.name=unlinkedbyte
 credential.helper=cache --timeout=240
                                   '-'
-                        |___________|          
+                        |___________|
 ```
 
 If you look at the first lines of the strace output, you can see that we have a time difference of about 10-15 minutes even though we have 240 seconds configured.
