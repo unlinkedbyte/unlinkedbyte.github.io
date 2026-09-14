@@ -8,7 +8,7 @@ tags: [x86, assembly, memory, kernel]
 
 Hi there. If you have made it this far, I doubt introductions are even necessary. I have simply decided to write this blog post for the reasons you have probably already seen in the repository, even though I never thought I would actually make one.
 
-Today, I was messing around in my lab with the classic LiveCD from Jon Erickson's *Hacking: The Art of Exploitation*, analyzing a basic `for` loop in 32-bit x86 assembly, when a fundamental question crossed my mind—something that, while learning C, I hadn't considered yet or had simply overlooked.
+Today, I was messing around in my lab with the classic LiveCD from Jon Erickson's *Hacking: The Art of Exploitation*, analyzing a basic `for` loop in 32-bit x86 assembly, when a fundamental question crossed my mind. Something that, while learning C, I hadn't considered yet or had simply overlooked.
 
 ### Memory Mapping in 32-bit Systems
 Before getting into the meat of the matter, it is worth noting a bit of context. Back in the day, on 32-bit systems, it was very common to see stack pointers starting with `0xbf...`. This was because user space was allocated in the highest memory ranges of the architecture (in the stack).
