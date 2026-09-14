@@ -19,7 +19,7 @@ Yesterday I spent the whole afternoon writing and researching for the post that 
 
 When I finally had a decent research done and the post looked good (in my opinion) I decided to upload it using the terminal as I usually do. 
 
-**Where does the problem arise?** After doing it, due to all the accumulated exhaustion, I simply put the computer into suspension mode. When I woke up, I was rereading the post to see how it turned out, looking for any possible typos, and there was one in the "final thoughts"--I had forgotten to add a hashtag (###, it was a title). I simply changed it and did the typical git push origin main. Here is where my surprise came: despite having the timeout configured to 3600 (before the checks), it was uploaded without having to enter credentials, even though 8 hours had passed! So obviously, this unexpected behaviour got my attention.
+**Where does the problem arise?** After doing it, due to all the accumulated exhaustion, I simply put the computer into suspension mode. When I woke up, I was rereading the post to see how it turned out, looking for any possible typos, and there was one in the "final thoughts" (I had forgotten to add a hashtag, ###, it was a title). I simply changed it and did the typical git push origin main. Here is where my surprise came: despite having the timeout configured to 3600 (before the checks), it was uploaded without having to enter credentials, even though 8 hours had passed! So obviously, this unexpected behaviour got my attention.
 
 ### The proof
 To start with, we had to rule out a "false positive" by running the relevant checks; these are the commands I used after configuring a new timeout of 240 seconds:

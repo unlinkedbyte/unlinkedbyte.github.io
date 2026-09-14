@@ -12,9 +12,9 @@ tags: [x86, memory, alignment, heap, glibc]
 
 Hi there. Today, I was back at it again with Jon Erickson's LiveCD, pushing my boundaries with GDB and analyzing compiled binaries. While researching how memory structures behave under the hood, I noticed something interesting: a structural quirk that reminded me of a class of information disclosure vulnerabilities, often involving heap padding or leftover data in reused memory.
 
-At first glance, unused bytes inside a heap allocation may appear to originate from a single source. In reality, they are produced by several independent layers--including the compiler, the ABI, and the allocator—each introducing its own form of padding, alignment, or metadata.
+At first glance, unused bytes inside a heap allocation may appear to originate from a single source. In reality, they are produced by several independent layers (including the compiler, the ABI, and the allocator) each introducing its own form of padding, alignment, or metadata.
 
-The original idea came from thinking about how data alignment and CPU efficiency affect the way structures are laid out in memory. As I followed that question deeper, the experiment gradually turned into an exploration of the different layers involved in a heap allocation--from compiler-inserted padding to glibc's chunk layout and internal metadata.
+The original idea came from thinking about how data alignment and CPU efficiency affect the way structures are laid out in memory. As I followed that question deeper, the experiment gradually turned into an exploration of the different layers involved in a heap allocation, from compiler-inserted padding to glibc's chunk layout and internal metadata.
 
 Distinguishing between these layers is essential when studying information disclosure vulnerabilities.
 
